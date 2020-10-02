@@ -1,0 +1,22 @@
+link:features
+1.//a[test()='features']
+2.//a[contains(test(),'features')]
+3.//a[test()='Alerts']
+
+
+Buttons:
+1.//button[@type='button' and @class='btn']
+2.button[contains(text(),'Sign In')]
+
+//div[class='dropdown']//button[@type='button' and @class='btn btn-secondary dropdown-toggle' and
+              @id='dropdownMenubutton']--//div[class='dropdown']=parent tag of button tag
+
+Parent-sibling xpath
+//a[containd(text(),'test 2 test 2')]parent::td//preceding-sibling::td//input[@name='contact_id']"))
+
+//td[text()='Airi Satou']//preceding-sibling::td
+
+List <WebElement> list=driver.findElements(By.xpath("//div[@role='listbox']//a/descendant::div[@class='match-icon']"));//match value is the common class for all suggestions
+
+
+List<WebElement> list=driver.findElements(By.xpath("//ul[contains(@class,'multiselect-container dropdown-menu')]//li//a//label"));
